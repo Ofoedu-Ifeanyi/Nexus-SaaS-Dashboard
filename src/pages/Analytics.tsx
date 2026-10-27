@@ -1,11 +1,14 @@
 
 import PageHeader from "../component/PageHeader";
 import RevenueChart from "../component/RevenueChart";
+import { useState } from "react";
 
 function Analytics() {
+    const [searchTerm, setSearchTerm] = useState('');
   return (
     <>
-      <PageHeader title="Analytics" />
+      <PageHeader title="Analytics" searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm} />
 
       <section className="analytics-section">
         <h2>Business Analytics</h2>
